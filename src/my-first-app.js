@@ -5,6 +5,7 @@ import { store as coreDataStore } from "@wordpress/core-data";
 
 import { PagesList } from './pages-list';
 import { CreatePageButton } from './create-page-button';
+import { Notifications } from './notifications';
 
 export function MyFirstApp() {
 	const [ searchTerm, setSearchTerm ] = useState( '' );
@@ -35,6 +36,7 @@ export function MyFirstApp() {
 				<CreatePageButton/>
 			</div>
 			<PagesList hasResolved={ hasResolved } pages={ pages }/>
+			<Notifications/>
 		</div>
 	);
 }
