@@ -3,7 +3,7 @@ import { Button, Modal } from '@wordpress/components';
 
 import { EditPageForm } from './edit-page-form';
 
-export function PageEditButton({ pageId }) {
+export function EditPageButton({ pageId }) {
 	const [ isOpen, setOpen ] = useState( false );
 	const openModal = () => setOpen( true );
 	const closeModal = () => setOpen( false );
