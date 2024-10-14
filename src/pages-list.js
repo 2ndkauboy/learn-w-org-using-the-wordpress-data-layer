@@ -2,6 +2,7 @@ import { Spinner } from "@wordpress/components";
 import { decodeEntities } from "@wordpress/html-entities";
 
 import { EditPageButton } from './edit-page-button';
+import { DeletePageButton } from './delete-page-button';
 
 export function PagesList( { hasResolved, pages } ) {
 	if ( ! hasResolved ) {
@@ -25,6 +26,7 @@ export function PagesList( { hasResolved, pages } ) {
 					<td>{ decodeEntities( page.title.rendered ) }</td>
 					<td>
 						<EditPageButton pageId={ page.id }/>
+						<DeletePageButton pageId={ page.id }/>
 					</td>
 				</tr>
 			) ) }
